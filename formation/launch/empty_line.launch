@@ -1,0 +1,17 @@
+<launch>
+
+	<node pkg="tf" type="static_transform_publisher" 
+	args="0 0 0 0 0 0 /world /tb3_0/odom 100" name="tb3_0_tf_broadcaster"/>
+        <node pkg="tf" type="static_transform_publisher"
+        args="0 0 0 0 0 0 /world /tb3_1/odom 100" name="tb3_1_tf_broadcaster"/>
+        <node pkg="tf" type="static_transform_publisher"
+        args="0 0 0 0 0 0 /world /tb3_2/odom 100" name="tb3_2_tf_broadcaster"/>
+        <node pkg="tf" type="static_transform_publisher"
+        args="0 0 0 0 0 0 /world /tb3_3/odom 100" name="tb3_3_tf_broadcaster"/>
+
+	<node pkg="formation" type="master" name="master"/>
+	<node pkg="formation" type="slave_tf_listener1" name="slave1"/>
+        <node pkg="formation" type="slave_tf_listener2" name="slave2"/>
+        <node pkg="formation" type="slave_tf_listener3" name="slave3"/>
+
+</launch>

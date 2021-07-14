@@ -1,0 +1,18 @@
+<launch>
+<!--
+	<node pkg="formation" type="tf_broadcaster" 
+		args="/tb3_0" name="tb3_0_tf_broadcaster"/>
+        <node pkg="formation" type="tf_broadcaster" 
+                args="/tb3_1" name="tb3_1_tf_broadcaster"/>
+        <node pkg="formation" type="tf_broadcaster"
+                args="/tb3_2" name="tb3_2_tf_broadcaster"/>
+        <node pkg="formation" type="tf_broadcaster"
+                args="/tb3_3" name="tb3_3_tf_broadcaster"/>
+-->
+
+	<node pkg="formation" type="master_move" name="master"/>
+	<node pkg="formation" type="slave_tf_listener1" name="slave1"/>
+        <node pkg="formation" type="slave_tf_listener2" name="slave2"/>
+        <node pkg="formation" type="slave_tf_listener3" name="slave3"/>
+
+</launch>
